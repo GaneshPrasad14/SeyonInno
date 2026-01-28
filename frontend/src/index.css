@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Seyon Innovations - Solar EPC Design System
+   Solar Yellow + Gray Palette - Clean, Futuristic, Trust-Driven
+*/
+
+@layer base {
+  :root {
+    /* Solar Yellow Primary */
+    --primary: 45 95% 51%;
+    --primary-foreground: 0 0% 10%;
+    
+    /* Golden accent for hover states */
+    --primary-hover: 42 90% 45%;
+    
+    /* Background - Clean whites and light grays */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+    
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+    
+    /* Secondary - Light gray */
+    --secondary: 220 10% 96%;
+    --secondary-foreground: 220 15% 20%;
+    
+    /* Muted - Subtle gray */
+    --muted: 220 10% 94%;
+    --muted-foreground: 220 10% 45%;
+    
+    /* Accent - Warm yellow tint */
+    --accent: 45 100% 95%;
+    --accent-foreground: 45 80% 25%;
+    
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders */
+    --border: 220 10% 90%;
+    --input: 220 10% 90%;
+    --ring: 45 95% 51%;
+    
+    --radius: 0.75rem;
+    
+    /* Custom Solar Theme Variables */
+    --solar-yellow: 45 95% 51%;
+    --solar-gold: 42 85% 45%;
+    --solar-dark: 220 20% 12%;
+    --solar-charcoal: 220 15% 20%;
+    --solar-gray: 220 10% 45%;
+    --solar-light: 220 10% 97%;
+    
+    /* Gradients */
+    --gradient-solar: linear-gradient(135deg, hsl(45 95% 51%) 0%, hsl(38 90% 45%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(220 20% 8% / 0.7) 0%, hsl(220 20% 8% / 0.4) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 10% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px hsl(220 20% 10% / 0.06);
+    --shadow-md: 0 4px 20px hsl(220 20% 10% / 0.08);
+    --shadow-lg: 0 8px 40px hsl(220 20% 10% / 0.12);
+    --shadow-solar: 0 4px 24px hsl(45 95% 51% / 0.25);
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 45 95% 51%;
+  }
+
+  .dark {
+    --primary: 45 95% 55%;
+    --primary-foreground: 0 0% 10%;
+    --primary-hover: 42 90% 50%;
+    
+    --background: 220 20% 8%;
+    --foreground: 220 10% 95%;
+    
+    --card: 220 18% 12%;
+    --card-foreground: 220 10% 95%;
+    
+    --popover: 220 18% 12%;
+    --popover-foreground: 220 10% 95%;
+    
+    --secondary: 220 15% 16%;
+    --secondary-foreground: 220 10% 90%;
+    
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 55%;
+    
+    --accent: 45 50% 15%;
+    --accent-foreground: 45 95% 70%;
+    
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 45 95% 55%;
+    
+    --solar-yellow: 45 95% 55%;
+    --solar-gold: 42 85% 50%;
+    --solar-dark: 220 20% 6%;
+    --solar-charcoal: 220 15% 85%;
+    --solar-gray: 220 10% 60%;
+    --solar-light: 220 15% 14%;
+    
+    --sidebar-background: 220 20% 8%;
+    --sidebar-foreground: 220 10% 90%;
+    --sidebar-primary: 45 95% 55%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 220 15% 16%;
+    --sidebar-accent-foreground: 220 10% 90%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 45 95% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .solar-gradient {
+    background: var(--gradient-solar);
+  }
+  
+  .hero-overlay {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .solar-shadow {
+    box-shadow: var(--shadow-solar);
+  }
+  
+  .text-gradient-solar {
+    background: var(--gradient-solar);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
